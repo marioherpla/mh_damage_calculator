@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Build Calculator</title>
+</head>
+<body>
+
+<h1>Calculadora de Build</h1>
+
+<form method="POST" action="/build_calculator/calculate">
+
+    <!-- Tipo de arma -->
+    <label>Tipo de arma</label><br>
+    <select name="weapon_type" required>
+        {% for weapon_type in weapons %}
+            <option value="{{ weapon_type }}">
+                {{ weapon_type.replace("_", " ").title() }}
+            </option>
+        {% endfor %}
+    </select>
+
+    <hr>
+
+    <!-- Stats del arma -->
+    <label>Ataque</label><br>
+    <input type="number" name="attack" min="0" step="1" required><br><br>
+
+    <label>Ataque elemental</label><br>
+    <input type="number" name="elemental" min="0" step="1" required><br><br>
+
+    <label>Afinidad</label><br>
+    <input type="number" name="affinity" min="-100" max="100" step="1" required>
+    <small>(%)</small>
+
+    <hr>
+
+    <!-- Habilidades -->
+    <h2>Habilidades</h2>
+
+    {% for skill_id, levels in skills.items() %}
+        <div>
+            <input type="checkbox"
+                   name="skills"
+                   value="{{ skill_id }}">
+
+            <strong>{{ skill_id.replace("_", " ").title() }}</strong>
+
+            <label>Nivel</label>
+            <select name="level_{{ skill_id }}">
+                {% for level in levels.keys() %}
+                    <option value="{{ level }}">{{ level }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <br>
+    {% endfor %}
+
+    <hr>
+
+    <button type="submit">Calcular daño</button>
+
+</form>
+
+</body>
+</html>
