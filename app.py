@@ -1,8 +1,10 @@
 from flask import Flask, render_template, request
-from all_dicts import ALL_WEAPONS
-from all_dicts import SKILL_EFFECTS
-
-from cls_damage import Weapon, Skill, BuildFactory, Damage
+from mh_damage.calculator.build_factory import BuildFactory
+from mh_damage.calculator.damage import Damage
+from mh_damage.calculator.skill import Skill
+from mh_damage.calculator.weapon import Weapon
+from mh_damage.static_data.skills import SKILL_EFFECTS
+from mh_damage.static_data.weapons import ALL_WEAPONS
 
 app = Flask(__name__)
 

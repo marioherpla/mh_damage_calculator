@@ -1,0 +1,26 @@
+SHARPNESS_MODIFIERS = {
+    "red": {
+        "raw": 0.5,
+        "elemental": 0.25,
+    },
+    "orange": {
+        "raw": 0.75,
+        "elemental": 0.5,
+    },
+    "yellow": {
+        "raw": 1.0,
+        "elemental": 0.75,
+    },
+    "green": {
+        "raw": 1.05,
+        "elemental": 1.0,
+    },
+    "blue": {
+        "raw": 1.2,
+        "elemental": 1.063,
+    },
+    "white": {
+        "raw": 1.32,
+        "elemental": 1.15,
+    },
+}

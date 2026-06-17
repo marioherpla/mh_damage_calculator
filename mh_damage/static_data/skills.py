@@ -1,28 +1,3 @@
-ALL_STATS = [
-    "attack",
-    "affinity",
-    "critical",
-    "elemental",
-    "critical_elemental"
-]
-
-ALL_WEAPONS = [
-    "great_sword",
-    "long_sword",
-    "sword_and_shield",
-    "dual_blades",
-    "hammer",
-    "hh",
-    "lance",
-    "gunlance",
-    "switch_axe",
-    "charge_blade",
-    "insect_glaive",
-    "light_bowgun",
-    "heavy_bowgun",
-    "bow"
-]
-
 SKILL_EFFECTS = {
     "attack_boost": {
         1: {"attack": {"flat": 3}},
@@ -67,7 +42,7 @@ SKILL_EFFECTS = {
         2: {"attack": {"flat": 6}},
         3: {"attack": {"flat": 10}},
         4: {"attack": {"flat": 15}},
-        5: {"attack": {"flat": 20}}, 
+        5: {"attack": {"flat": 20}},
     },
     "weakness_exploit": {
         1: {"affinity": {"flat": 0.05}},
@@ -195,7 +170,7 @@ SKILL_EFFECTS = {
             "rest": {"attack": {"flat": 18}, "elemental": {"flat": 14}},
         },
     },
-    "critical_element":{
+    "critical_element": {
         1: {
             "great_sword": {"critical_elemental": {"replace": 1.07}},
             "long_sword": {"critical_elemental": {"replace": 1.05}},
@@ -245,31 +220,4 @@ SKILL_EFFECTS = {
             "bow": {"critical_elemental": {"replace": 1.15}},
         },
     }
-}
-
-SHARPNESS_MODIFIERS = {
-    "red": {
-        "raw": 0.5,
-        "elemental": 0.25,
-    },
-    "orange": {
-        "raw": 0.75,
-        "elemental": 0.5,
-    },
-    "yellow": {
-        "raw": 1.0,
-        "elemental": 0.75,
-    },
-    "green": {
-        "raw": 1.05,
-        "elemental": 1.0,
-    },
-    "blue": {
-        "raw": 1.2,
-        "elemental": 1.063,
-    },
-    "white": {
-        "raw": 1.32,
-        "elemental": 1.15,
-    },
 }
